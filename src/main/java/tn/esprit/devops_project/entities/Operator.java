@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-
+import lombok.Data;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.*;
@@ -20,6 +20,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Data
 public class Operator implements Serializable{
 	private static final long serialVersionUID = 1L;
 
@@ -32,5 +33,6 @@ public class Operator implements Serializable{
 	@OneToMany
 	@JsonIgnore
 	Set<Invoice> invoices;
-	
+
+
 }
